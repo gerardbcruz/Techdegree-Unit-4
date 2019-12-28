@@ -1,3 +1,6 @@
+/* ============================================= */
+/*              Mixins                           */
+/* ============================================= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -393,26 +396,47 @@ a {
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color 0.7s ease-out;
 }
 
 .default {
   background-color: #51ddfc;
 }
+.default:hover {
+  background-color: #9cecfd;
+  outline: none;
+}
 
 .error {
   background-color: #e4757a;
+}
+.error:hover {
+  background-color: #f1b5b8;
+  outline: none;
 }
 
 .info {
   background-color: #927bc1;
 }
+.info:hover {
+  background-color: #bdafd9;
+  outline: none;
+}
 
 .success {
   background-color: #63cc82;
 }
+.success:hover {
+  background-color: #9ddfb0;
+  outline: none;
+}
 
 .warning {
   background-color: #fd7856;
+}
+.warning:hover {
+  background-color: #feb4a2;
+  outline: none;
 }
 
 /* ============================================= */
@@ -449,7 +473,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-
 .nav-link {
   text-align: center;
   border-radius: 5px;
@@ -458,7 +481,6 @@ a {
   width: 100%;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;

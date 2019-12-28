@@ -10,24 +10,30 @@
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color .7s ease-out;
 }
 
 .default {
   background-color: $color-link;
+  @include hover-light($color-link);
 }
 
 .error {
   background-color: $color-button-error;
+  @include hover-light($color-button-error);
 }
 
 .info {
   background-color: $color-button-info;
+  @include hover-light($color-button-info);
 }
 
 .success {
   background-color: $color-button-success;
+  @include hover-light($color-button-success);
 }
 
 .warning {
   background-color: $color-button-warning;
+  @include hover-light($color-button-warning);
 }

@@ -1,0 +1,16 @@
+/* ============================================= */
+/*              Mixins                           */
+/* ============================================= */
+
+@mixin mq($breakpoint) {
+  @media (min-width:$breakpoint){
+    @content;
+  }
+}
+
+@mixin hover-light($color) {
+  &:hover {
+    background-color: lighten($color, 15%);
+    outline: none;
+  }
+}
