@@ -4,18 +4,29 @@
 
 .container {
   padding: 0 10px;
-  // @include mq($mq-breakpoint) {
-  //   max-width: 1400px;
-  //   display: block;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
+  @include mq($mq-breakpoint) {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
+  @include mq($mq-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.centered {
+  @include mq($mq-breakpoint) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 [class^=col] {
@@ -24,54 +35,127 @@
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
+  @include mq($mq-breakpoint) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+  & + & {
+    @include mq($mq-breakpoint) {
+      margin-left: 10px;
+    }
+  }
 }
 
-.theme.col-1 {
-  background-color: $color-col-1-bg;
+// COLUMNS
+
+.col-1 {
+  &.theme {
+    background-color: $color-col-1-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 8.33%;
+  }
 }
 
-.theme.col-2 {
-  background-color: $color-col-2-bg;
+.col-2 {
+  &.theme {
+    background-color: $color-col-2-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 16.67%;
+  }
 }
 
-.theme.col-3 {
-  background-color: $color-col-3-bg;
+.col-3 {
+  &.theme {
+    background-color: $color-col-3-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 25.00%;
+  }
 }
 
-.theme.col-4 {
-  background-color: $color-col-4-bg;
+.col-4 {
+  &.theme {
+    background-color: $color-col-4-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 33.33%;
+  }
 }
 
-.theme.col-5 {
-  background-color: $color-col-5-bg;
+.col-5 {
+  &.theme {
+    background-color: $color-col-5-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 41.67%;
+  }
 }
 
-.theme.col-6 {
-  background-color: $color-col-6-bg;
+.col-6 {
+  &.theme {
+    background-color: $color-col-6-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 50.00%;
+  }
 }
 
-.theme.col-7 {
-  background-color: $color-col-7-bg;
+.col-7 {
+  &.theme {
+    background-color: $color-col-7-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 58.33%;
+  }
 }
 
-.theme.col-8 {
-  background-color: $color-col-8-bg;
+.col-8 {
+  &.theme {
+    background-color: $color-col-8-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 66.67%;
+  }
 }
 
-.theme.col-9 {
-  background-color: $color-col-9-bg;
+.col-9 {
+  &.theme {
+    background-color: $color-col-9-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 75.00%
+  }
 }
 
-.theme.col-10 {
-  background-color: $color-col-10-bg;
+.col-10 {
+  &.theme {
+    background-color: $color-col-10-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 83.33%;
+  }
 }
 
-.theme.col-11 {
-  background-color: $color-col-11-bg;
+.col-11 {
+  &.theme {
+    background-color: $color-col-11-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 91.67%;
+  }
 }
 
-.theme.col-12 {
-  background-color: $color-col-12-bg;
+.col-12 {
+  &.theme {
+    background-color: $color-col-12-bg;
+  }
+  @include mq($mq-breakpoint) {
+    flex-basis: 100%;
+  }
 }
 
 .card {

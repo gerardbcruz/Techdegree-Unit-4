@@ -11,6 +11,14 @@
   text-transform: uppercase;
   border-radius: 5px;
   transition: background-color .7s ease-out;
+  @include mq($mq-breakpoint) {
+    padding: 10px 30px;
+  }
+  & + & {
+    @include mq($mq-breakpoint) {
+      margin-left: 10px;
+    }
+  }
 }
 
 .default {
